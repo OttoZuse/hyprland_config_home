@@ -1,0 +1,22 @@
+[[language]]
+name = "cpp"
+
+[language.indent]
+tab-width = 4
+unit = "    "
+soft-tabs = true
+
+[[language]]
+name = "python"
+
+[language.debugger]
+name = "debugpy"
+transport = "stdio"
+command = "python3"
+args = ["-m",  "debugpy.adapter"]
+
+[[language.debugger.templates]]
+name = "source"
+request = "launch"
+completion = [ { name = "entrypoint", completion = "filename", default = "." } ]
+args = { mode = "debug", program = "{0}" }

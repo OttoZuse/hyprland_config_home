@@ -1,0 +1,12 @@
+# [editor]
+# soft-tabs = true
+# tab-width = 4
+# theme = "base16_terminal"
+# theme = "tokyonight"
+theme = "base16_transparent"
+# theme = "ttox"
+# theme = "term16_dark"
+# theme = "heisenberg"
+# theme = "horison_dark"
+# theme = "merionette"
+# theme = "emacs"
