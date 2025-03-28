@@ -11,7 +11,7 @@
     "margin-right": 10,
     // Choose the order of the modules
     "modules-left": [
-        "custom/launcher",
+        // "custom/launcher",
         "hyprland/workspaces",
         "cpu",
         "memory",
@@ -60,7 +60,7 @@
         "format": "{}°",
         "tooltip": true,
         "interval": 900,
-        "exec": "wttrbar",
+        "exec": "wttrbar --location Omsk",
         "return-type": "json"
     },
     // "custom/language": {
