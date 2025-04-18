@@ -105,11 +105,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias shx="sudo -E hx"
+shx() {
+  doas env -i $(env | grep -E '^(WAYLAND_DISPLAY|DISPLAY|XDG_RUNTIME_DIR|PATH|HOME)=' ) hx "$@"
+}
+
+# alias shx="doas env -i $(env) hx"
 alias mountrouter="doas sshfs root@OpenWrt:/opt/zapret /mnt/router"
 alias umountrouter="doas fusermount -u /mnt/router"
 alias router="ssh root@OpenWrt"
 alias dosu="doas su"
+alias sudo="doas"
 alias shx-router="sudo -E hx /mnt/router"
 alias loadcfg="scp /home/joyboy/config root@OpenWrt:/opt/zapret"
+alias fetch="fastfetch | lolcat"
 export PATH=$PATH:/home/joyboy/.millennium/ext/bin
