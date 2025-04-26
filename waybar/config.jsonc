@@ -17,11 +17,13 @@
         "memory",
         "temperature",
         "disk"
+        // "disk2"
     ],
     "modules-center": [
         "hyprland/window"
     ],
     "modules-right": [
+        // "custom/waybar-media",
         "network",
         "pulseaudio",
         "custom/notifications",
@@ -44,6 +46,14 @@
         "on-click-right": "pkill tofi || sleep 0.15 && tofi-run -c ~/.config/tofi/tofi.launcher.conf",
         "on-click": "pkill wofi || wofi --show drun -n",
         "on-click-right": "pkill wofi || wofi --show run -n"
+    },
+    "custom/waybar-media": {
+        "return-type": "json",
+        "exec": "/home/joyboy/.config/waybar/scripts/waybar-media/waybar-media.py status",
+        "on-click": "/home/joyboy/.config/waybar/scripts/waybar-media/waybar-media.py playpause",
+        "on-scroll-up": "/home/joyboy/.config/waybar/scripts/waybar-media/waybar-media.py previous",
+        "on-scroll-down": "/home/joyboy/.config/waybar/scripts/waybar-media/waybar-media.py next",
+        "escape": true
     },
     "hyprland/workspaces": {
         "format": "{icon} {name}",
@@ -104,6 +114,13 @@
     },
     "disk": {
         "path": "/home",
+        "format": " {free} ({percentage_free}%)",
+        "tooltip": true,
+        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+        "interval": 2
+    },
+    "disk2": {
+        "path": "/",
         "format": " {free} ({percentage_free}%)",
         "tooltip": true,
         "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
