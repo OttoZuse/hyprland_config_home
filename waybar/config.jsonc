@@ -1,23 +1,22 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    //"gtk-layer-shell": "false",
-    "height": 45, // Waybar height (to be removed for auto height)
+    // "gtk-layer-shell": "false",
+    // "height": 30, // Waybar height (to be removed for auto height)
     // "width": 2560, // Waybar width
     "spacing": 0, // Gaps between modules (0px) Adjusted in the css
-    "margin-top": 0,
-    //"margin-bottom":-10,
-    "margin-left": 10,
-    "margin-right": 10,
+    "margin-top": -5,
+    // "margin-bottom":-10,
+    "margin-left": 5,
+    "margin-right": 5,
     // Choose the order of the modules
     "modules-left": [
-        // "custom/launcher",
         "hyprland/workspaces",
         "cpu",
         "memory",
         "temperature",
-        "disk"
-        // "disk2"
+        "disk",
+        "cava"
     ],
     "modules-center": [
         "hyprland/window"
@@ -37,6 +36,24 @@
         // "custom/power"
         // "custom/custom"
     ],
+    "cava": {
+            "framerate": 240,
+            "autosens": 1,
+            "sensitivity": 2,
+            "bars": 14,
+            "lower_cutoff_freq": 50,
+            "higher_cutoff_freq": 10000,
+            "method": "pulse",
+            "source": "auto",
+            "stereo": true,
+            "reverse": false,
+            "bar_delimiter": 0,
+            "monstercat": true,
+            "waves": true,
+            "noise_reduction": 0.77,
+            "input_delay": 0,
+            "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+    },
     "custom/launcher": {
         "format": "{}",
         "tooltip": true,
