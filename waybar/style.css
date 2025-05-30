@@ -43,7 +43,9 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: 'CaskaydiaCove Nerd Font', monospace;
+  /* font-family: "Symbols Nerd Font Mono", "Iosevka Nerd Font", "Font Awesome 6 Free", sans-serif; */
+  font-family: 'Symbols Nerd Font Mono', 'Fira Code Nerd Font', sans-serif;
+  /* font-family: 'CaskaydiaCove Nerd Font', monospace; */
   font-size: 13px;
   min-height: 0;
 }
@@ -88,6 +90,7 @@
 #hyprland-language,
 #custom-ss,
 #cava,
+#language,
 #custom-weather {
   background-color: @surface0;
   color: @text;

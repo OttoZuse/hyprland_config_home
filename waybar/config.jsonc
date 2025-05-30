@@ -1,5 +1,6 @@
 {
     "layer": "top", // Waybar at top layer
+    // "font": "sans-serif 12",
     "position": "top", // Waybar position (top|bottom|left|right)
     // "gtk-layer-shell": "false",
     // "height": 30, // Waybar height (to be removed for auto height)
@@ -27,7 +28,7 @@
         "pulseaudio",
         "custom/notifications",
         "custom/weather",
-        // "hyprland/language",
+        "hyprland/language",
         "tray",
         "clock"
         // "custom/weather",
@@ -86,7 +87,7 @@
     "custom/weather": {
         "format": "{}°",
         "tooltip": true,
-        "interval": 900,
+        "interval": 600,
         "exec": "wttrbar --location Omsk",
         "return-type": "json"
     },
@@ -97,19 +98,20 @@
     //     "tooltip": false
     // },
     "hyprland/language": {
-        "format": "{}",
-        "format-en": "Murica",
-        "format-ru": "Мяу =^~^=",
-        "keyboard-name": "at-translated-set-2-keyboard"
+      "format": "{}",
+      "format-en": "US",
+      "format-ru": "RU",
+      "keyboard-name": "semitek-usb-hid-gaming-keyboard",
+      "on-click": "hyprctl switchxkblayout semitek-usb-hid-gaming-keyboard next"
     },
     "cpu": {
-        "format": " {usage}%",
+        "format": "  {usage}%",
         "tooltip": true,
         "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
         "interval": 2
     },
     "memory": {
-        "format": " {}%",
+        "format": " {}%",
         "tooltip": true,
         "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
         "interval": 2
