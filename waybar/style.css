@@ -43,8 +43,8 @@
 * {
   border: none;
   border-radius: 0;
-  /* font-family: "Symbols Nerd Font Mono", "Iosevka Nerd Font", "Font Awesome 6 Free", sans-serif; */
-  font-family: 'Symbols Nerd Font Mono', 'Fira Code Nerd Font', sans-serif;
+  font-family: "Symbols Nerd Font Mono", "Iosevka Nerd Font", "Font Awesome 6 Free", "sans-serif", sans-serif;
+  /* font-family: 'Symbols Nerd Font Mono', 'Fira Code Nerd Font', sans-serif; */
   /* font-family: 'CaskaydiaCove Nerd Font', monospace; */
   font-size: 13px;
   min-height: 0;

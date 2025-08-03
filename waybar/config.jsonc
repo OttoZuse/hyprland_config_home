@@ -28,7 +28,7 @@
         "pulseaudio",
         "custom/notifications",
         "custom/weather",
-        "hyprland/language",
+        // "hyprland/language",
         "tray",
         "clock"
         // "custom/weather",
@@ -101,7 +101,7 @@
       "format": "{}",
       "format-en": "US",
       "format-ru": "RU",
-      "keyboard-name": "semitek-usb-hid-gaming-keyboard",
+      "keyboard-name": "",
       "on-click": "hyprctl switchxkblayout semitek-usb-hid-gaming-keyboard next"
     },
     "cpu": {
@@ -111,7 +111,7 @@
         "interval": 2
     },
     "memory": {
-        "format": " {}%",
+        "format": "  {}%",
         "tooltip": true,
         "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
         "interval": 2
@@ -133,7 +133,7 @@
     },
     "disk": {
         "path": "/home",
-        "format": " {free} ({percentage_free}%)",
+        "format": "󰋊 {free} ({percentage_free}%)",
         "tooltip": true,
         "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
         "interval": 2
