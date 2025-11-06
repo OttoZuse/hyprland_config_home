@@ -43,9 +43,13 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "Symbols Nerd Font Mono", "Iosevka Nerd Font", "Font Awesome 6 Free", "sans-serif", sans-serif;
-  /* font-family: 'Symbols Nerd Font Mono', 'Fira Code Nerd Font', sans-serif; */
-  /* font-family: 'CaskaydiaCove Nerd Font', monospace; */
+  /* font-family: sans-serif; */
+  /* font-family: minecrafter; */
+  /* font-family: monocraft; */
+  /* font-family: Helvetica; */
+  font-family: maplemononormal;
+  /* font-family: minecraft; */
+  /* font-family: "Jetbrains Mono Nerd", monospace; */
   font-size: 13px;
   min-height: 0;
 }
@@ -91,7 +95,21 @@
 #custom-ss,
 #cava,
 #language,
+
 #custom-weather {
+  background-color: @surface0;
+  color: @text;
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  margin-top: 10px;
+  /*
+    margin-bottom: 10px;
+*/
+  margin-right: 10px;
+}
+
+#custom-openweather {
   background-color: @surface0;
   color: @text;
   border-radius: 16px;
@@ -124,8 +142,6 @@
   padding-bottom: 0px;
   padding-right: 10px;
 }
-
-
 
 /* =============================== */
 /* Workspaces */
@@ -210,6 +226,7 @@
 /* System Monitoring Modules */
 #cpu,
 #memory,
+#custom-gpu-usage,
 #temperature {
   color: @blue;
 }
@@ -237,10 +254,29 @@
 
 #disk {
   color: @peach;
+  /* border-top-left-radius: 0; */
+  /* border-bottom-left-radius: 0; */
+  /* padding-left: 5px; */
+  /* padding-right: 1rem; */
+  border-radius: 0px;
+  margin-right: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  
+}
+
+#custom-gpu-usage {
+  color: @red;
+  background-color: @surface0;
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+  margin-top: 10px;
+
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  margin-left: 0px;
   padding-left: 5px;
-  padding-right: 1rem;
 }
 
 /* Updates Module */

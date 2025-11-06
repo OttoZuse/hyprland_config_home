@@ -1,4 +1,3 @@
- 
 * {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 16px;
@@ -6,12 +5,27 @@
     font-weight: bold;
 }
 
-window#waybar {
-    background: transparent;
-    background-color: transparent;
-    color: #ebdbb2;
-    border: 2px solid #ebdbb2;
+/* * { */
+  /* transition: none; */
+  /* box-shadow: none; */
+  /* font-family: JetBrainsMono; */
+  /* font-size: 12.5px; */
+  /* color: #89CFF0; */
+/* } */
+
+#waybar {
+  margin-top: 14px;
+  background: rgba(52,45,113,0.3);
+  border-radius: 12px;
+  border: 2px solid #89CFF0;
 }
+
+/* window#waybar { */
+    /* background: transparent; */
+    /* background-color: transparent; */
+    /* color: #ebdbb2; */
+    /* border: 2px solid #ebdbb2; */
+/* } */
 
 button {
     border: none;
@@ -22,6 +36,14 @@ button:hover {
     background: inherit;
     color: #ebdbb2;
     border-top: 2px solid #ebdbb2;
+}
+
+#mode, #battery, #cpu, #disk, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #mpd, #clock, #temperature {
+  margin: 4px 2px;
+  padding: 0 6px;
+  border-radius: 20px;
+  min-width: 10px;
+  background-color: transparent;
 }
 
 #workspaces button {
@@ -92,7 +114,6 @@ button:hover {
 
 #backlight {
     color: #ebdbb2;	    	
-
 }
 
 /* If workspaces is the leftmost module, omit left margin */

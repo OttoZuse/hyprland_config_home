@@ -17,7 +17,9 @@
         "memory",
         "temperature",
         "disk",
-        "cava"
+        "custom/gpu-usage",
+        // "custom/gpu",
+        "custom/cava"
     ],
     "modules-center": [
         "hyprland/window"
@@ -27,16 +29,29 @@
         "network",
         "pulseaudio",
         "custom/notifications",
-        "custom/weather",
-        // "hyprland/language",
+        // "custom/weather",
+        "custom/openweather",
+        "hyprland/language",
         "tray",
         "clock"
-        // "custom/weather",
         // "custom/cycle_wall",
         // "custom/clipboard"
         // "custom/power"
         // "custom/custom"
     ],
+    "custom/gpu-usage": {
+        "format": "󰾲 {}",
+        "exec": "gpu-usage-waybar",
+        "return-type": "json",
+        "format-icons": "󰾲",
+        "on-click": "exec lact"
+        // "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'nvtop'"
+    },
+    "custom/gpu": {
+        "exec": "waybar-amd-module gpu junction", 
+        "return-type": "json",
+        "interval": 3
+    },
     "cava": {
             "framerate": 240,
             "autosens": 1,
@@ -54,6 +69,12 @@
             "noise_reduction": 0.77,
             "input_delay": 0,
             "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+    },
+    "custom/openweather": {
+        "exec": "~/.config/waybar/scripts/openweathermap.sh",
+        "interval": 600,
+        "format": "{}",
+        "tooltip": false
     },
     "custom/launcher": {
         "format": "{}",
@@ -101,17 +122,17 @@
       "format": "{}",
       "format-en": "US",
       "format-ru": "RU",
-      "keyboard-name": "",
+      "keyboard-name": "semitek-usb-hid-gaming-keyboard",
       "on-click": "hyprctl switchxkblayout semitek-usb-hid-gaming-keyboard next"
     },
     "cpu": {
-        "format": "  {usage}%",
+        "format": " {usage}%",
         "tooltip": true,
         "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
         "interval": 2
     },
     "memory": {
-        "format": "  {}%",
+        "format": " {}%",
         "tooltip": true,
         "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
         "interval": 2
@@ -119,8 +140,8 @@
     "temperature": {
         "thermal-zone": 2,
         "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 40,
-        "format-critical": "{icon} {temperatureC}°C",
+        "critical-threshold": 60,
+        "format-critical": "{icon}{temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
         "format-icons": [
             "",
