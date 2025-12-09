@@ -238,7 +238,7 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click": "easyeffects"
     },
     "backlight": {
         // "device": "acpi_video1",
