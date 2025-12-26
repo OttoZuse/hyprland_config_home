@@ -120,8 +120,8 @@
     // },
     "hyprland/language": {
       "format": "{}",
-      "format-en": "US",
-      "format-ru": "RU",
+      "format-en": "🇺🇸",
+      "format-ru": "🇷🇺",
       "keyboard-name": "semitek-usb-hid-gaming-keyboard",
       "on-click": "hyprctl switchxkblayout semitek-usb-hid-gaming-keyboard next"
     },
@@ -306,7 +306,7 @@
     },
     "clock": {
         "timezone": "Asia/Omsk",
-        "format": " {:%d <small>%a</small> %H:%M}",
+        "format": " {:%a %d %b %H:%M}",
         //"format": " {:%a %b %d %Y | %H:%M}",
         "format-alt": " {:%A %B %d %Y (%V) | %r}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
