@@ -105,21 +105,24 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-shx() {
-  doas env -i $(env | grep -E '^(WAYLAND_DISPLAY|DISPLAY|XDG_RUNTIME_DIR|PATH|HOME)=' ) hx "$@"
-}
+# shx() {
+#   doas env -i $(env | grep -E '^(WAYLAND_DISPLAY|DISPLAY|XDG_RUNTIME_DIR|PATH|HOME)=' ) hx "$@"
+# }
 
 # alias shx="doas env -i $(env) hx"
 alias mountrouter="doas sshfs root@OpenWrt:/opt/zapret /mnt/router"
+alias shx="sudo -E hx $@"
 alias umountrouter="doas fusermount -u /mnt/router"
 alias router="ssh root@OpenWrt"
-alias dosu="doas su"
-alias sudo="doas"
+# alias dosu="doas su"
 alias loadcfg="scp /home/joyboy/config root@OpenWrt:/opt/zapret"
-alias loadhosts="scp /home/joyboy/zapret-hosts-user.txt root@OpenWrt:/opt/zapret/ipset"
+alias loadall="scp /home/joyboy/zapret-all root@OpenWrt:/opt/zapret/ipset"
+alias loadexclude="scp /home/joyboy/zapret-exclude root@OpenWrt:/opt/zapret/ipset"
+alias loadblock="scp /home/joyboy/blockcheck.sh root@OpenWrt:/opt/zapret"
 alias clashoff="systemctl stop clash-verge-service.service"
 alias clashon="systemctl start clash-verge-service.service"
 # alias fetch="fastfetch --config examples/13.jsonc --file ~/ascii/cool_pepe | lolcat"
 # alias fetch="fastfetch --config examples/13.jsonc --file ~/ascii/doomer"
 alias fetch="fastfetch --file ~/ascii/doomer --config examples/25.jsonc"
-export PATH=$PATH:/home/joyboy/.millennium/ext/bin
+alias hl="start-hyprland"
+# export PATH=$PATH:/home/joyboy/.millennium/ext/bin

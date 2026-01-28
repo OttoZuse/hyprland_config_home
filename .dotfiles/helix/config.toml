@@ -1,0 +1,5 @@
+theme = "base16_transparent"
+[editor]
+true-color = true
+# soft-tabs = true
+# tab-width = 4

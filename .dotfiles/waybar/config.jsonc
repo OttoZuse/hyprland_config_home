@@ -41,7 +41,7 @@
     ],
     "custom/gpu-usage": {
         "format": "󰾲 {}",
-        "exec": "gpu-usage-waybar",
+        "exec": "~/.cargo/bin/gpu-usage-waybar --text-format {gpu_utilization}%' '{mem_utilization}%' '{temperature}°C",
         "return-type": "json",
         "format-icons": "󰾲",
         "on-click": "exec lact"
@@ -69,12 +69,6 @@
             "noise_reduction": 0.77,
             "input_delay": 0,
             "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-    },
-    "custom/openweather": {
-        "exec": "~/.config/waybar/scripts/openweathermap.sh",
-        "interval": 600,
-        "format": "{}",
-        "tooltip": false
     },
     "custom/launcher": {
         "format": "{}",
@@ -104,6 +98,13 @@
         "on-scroll-up": "hyprctl dispatch workspace e-1",
         "on-scroll-down": "hyprctl dispatch workspace e+1",
         "on-click": "activate"
+    },
+    "custom/openweather": {
+        "exec": "~/.config/waybar/scripts/openweathermap.sh",
+        "interval": 600,
+        "format": "{}",
+        "tooltip": false,
+        "on-click": "kitty --title wttr.in/Omsk sh -c 'curl wttr.in/Omsk'"
     },
     "custom/weather": {
         "format": "{}°",

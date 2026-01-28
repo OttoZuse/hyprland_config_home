@@ -12,7 +12,7 @@ name = "python"
 [language.debugger]
 name = "debugpy"
 transport = "stdio"
-command = "python3"
+command = "py"
 args = ["-m",  "debugpy.adapter"]
 
 [[language.debugger.templates]]
