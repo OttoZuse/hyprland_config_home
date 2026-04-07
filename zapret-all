@@ -42,13 +42,13 @@ cdn.factorio.com
 factorio.com
 webcdn.factorio.com
 cdn.discordapp.com
+www.gstatic.com
 
 cloudflare-ech.com
 torproject.org
 www.torproject.org
 atlas.torproject.org
 metrics.torproject.org
-abs-0.twimg.com
 abs-zero.twimg.com
 abs.twimg.com
 cdn.syndication.twimg.com
@@ -147,12 +147,12 @@ excalidraw.com
 excalidraw.nyc3.cdn.digitaloceanspaces.com
 cdn.localizeapi.com␍
 cdn.prod.website-files.com␍
-wttr.in
+# wttr.in
 external-content.duckduckgo.com
 duckduckgo.com
 x.com
 abs.twimg.com
-abs-0.twimg.com
+# abs-0.twimg.com
 pbs.twimg.com
 tryhackme.com
 js.hsforms.net
@@ -176,3 +176,19 @@ static.monotype.com
 cdn.myfonts.net
 cms.myfonts.net
 channels.nixos.org
+pob.cool
+web.poecdn.com
+zero-to-nix.com
+nix.dev
+www.tp-link.com
+static.tp-link.com
+trilleryx1.kinibolt.net
+calamitymod.wiki.gg
+releases.nixos.org
+help.downloadhelper.net
+u.cubeupload.com
+soundcloud.com
+a-v2.sndcdn.com
+style.sndcdn.com
+www.quora.com
+pikabu.ru
