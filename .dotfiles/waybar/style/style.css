@@ -1,0 +1,134 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 16px;
+    min-height: 0;
+    font-weight: bold;
+}
+
+/* * { */
+  /* transition: none; */
+  /* box-shadow: none; */
+  /* font-family: JetBrainsMono; */
+  /* font-size: 12.5px; */
+  /* color: #89CFF0; */
+/* } */
+
+#waybar {
+  margin-top: 14px;
+  background: rgba(52,45,113,0.3);
+  border-radius: 12px;
+  border: 2px solid #89CFF0;
+}
+
+/* window#waybar { */
+    /* background: transparent; */
+    /* background-color: transparent; */
+    /* color: #ebdbb2; */
+    /* border: 2px solid #ebdbb2; */
+/* } */
+
+button {
+    border: none;
+    border-radius: 0;
+}
+
+button:hover {
+    background: inherit;
+    color: #ebdbb2;
+    border-top: 2px solid #ebdbb2;
+}
+
+#mode, #battery, #cpu, #disk, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #mpd, #clock, #temperature {
+  margin: 4px 2px;
+  padding: 0 6px;
+  border-radius: 20px;
+  min-width: 10px;
+  background-color: transparent;
+}
+
+#workspaces button {
+    padding: 0 4px;
+}
+
+#workspaces button.focused {
+    color: #83a598;
+}
+
+#workspaces button.active {
+    color: #83a598;
+}
+
+#workspaces button.urgent {
+    background-color: transparent;
+}
+
+#pulseaudio,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#wireplumber,
+#tray,
+#network,
+#mode,
+#scratchpad {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#clock {
+    color: #ebdbb2;
+}
+
+#clock.date {
+    color: #ebdbb2;
+}
+
+#pulseaudio {
+    color: #ebdbb2;
+}
+
+#network {
+    color: #ebdbb2;
+}
+
+#idle_inhibitor {
+    margin-right: 12px;
+    color: #ebdbb2;
+}
+
+#idle_inhibitor.activated {
+    color: #ebdbb2;
+}
+
+#battery {
+    color: #ebdbb2;
+}
+
+#backlight {
+    color: #ebdbb2;	    	
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left>widget:first-child>#workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right>widget:last-child>#workspaces {
+    margin-right: 0;
+}
+
+#custom-vpn {
+    color: #ebdbb2;
+    border-radius: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+}

@@ -1,0 +1,27 @@
+# [language-server.clangd]
+# command = "clangd"
+# args = ["--query-driver=/home/joyboy/.nix-profile/bin/g++"]
+
+[[language]]
+name = "cpp"
+# language-servers = ["ccls"]
+
+[language.indent]
+tab-width = 4
+unit = "    "
+soft-tabs = true
+
+[[language]]
+name = "python"
+
+[language.debugger]
+name = "debugpy"
+transport = "stdio"
+command = "py"
+args = ["-m",  "debugpy.adapter"]
+
+[[language.debugger.templates]]
+name = "source"
+request = "launch"
+completion = [ { name = "entrypoint", completion = "filename", default = "." } ]
+args = { mode = "debug", program = "{0}" }
