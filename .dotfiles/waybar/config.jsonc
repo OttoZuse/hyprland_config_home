@@ -44,7 +44,7 @@
         "format": "󰾲 {}",
         "exec": "~/.cargo/bin/gpu-usage-waybar --text-format {gpu_utilization}%' '{mem_utilization}%' '{temperature}°C",
         "return-type": "json",
-        "format-icons": "󰾲",
+        "format-icons": "󰾲 ",
         "on-click": "exec lact"
         // "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'nvtop'"
     },
@@ -90,15 +90,18 @@
         "escape": true
     },
     "hyprland/workspaces": {
-        "format": "{icon} {name}",
-        "format": "",
+        // "format": "{icon} {id}",
+        "format": "{}",
         "format-icons": {
             "active": "",
             "default": ""
         },
-        "on-scroll-up": "hyprctl dispatch workspace e-1",
-        "on-scroll-down": "hyprctl dispatch workspace e+1",
-        "on-click": "activate"
+        // "on-scroll-up": "hyprctl dispatch workspace e-1",
+        // "on-scroll-down": "hyprctl dispatch workspace e+1",
+        // "on-click": "activate"
+        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'",
+        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'",
+        "on-click": "hyprctl dispatch 'hl.dsp.focus({ workspace = <id> })'"
     },
     "custom/openweather": {
         "exec": "~/.config/waybar/scripts/openweathermap.sh",
@@ -122,7 +125,7 @@
     // },
     "hyprland/language": {
       "format": "{}",
-      "format-en": "🇺🇸",
+      "format-en": "🇬🇧",
       "format-ru": "🇷🇺",
       "keyboard-name": "semitek-usb-hid-gaming-keyboard",
       "on-click": "hyprctl switchxkblayout semitek-usb-hid-gaming-keyboard next"
@@ -156,16 +159,16 @@
     },
     "disk": {
         "path": "/",
-        // "format": "󰋊 {free} ({percentage_free}%)",
-        "format": "r {free} ({percentage_free}%)",
+        "format": "󰋊 {free} ({percentage_free}%)",
+        // "format": "r {free} ({percentage_free}%)",
         "tooltip": true,
         "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
         "interval": 2
     },
     "disk#2": {
         "path": "/home",
-        // "format": " {free} ({percentage_free}%)",
-        "format": "h {free}",
+        "format": " {free} ({percentage_free}%)",
+        // "format": "h {free}",
         "tooltip": true,
         "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
         "interval": 2
@@ -242,7 +245,7 @@
                 ""
             ]
         },
-        "on-click": "easyeffects"
+        "on-click": "pavucontrol"
     },
     "backlight": {
         // "device": "acpi_video1",

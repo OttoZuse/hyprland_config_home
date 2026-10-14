@@ -231,7 +231,6 @@ so.lordfilm17.ru
 cdn.factorio.com
 factorio.com
 webcdn.factorio.com
-cdn.discordapp.com
 
 cloudflare-ech.com
 torproject.org
@@ -252,21 +251,6 @@ idcta.api.bbc.co.uk
 a1.api.bbc.co.uk
 emp.bbc.com
 atlasofsurveillance.org
-static.rutracker.cc
-discord.com
-discord.gg
-discordapp.com
-discordapp.net
-discord.app
-discord.media
-discordcdn.com
-discord.dev
-discord.new
-discord.gift
-discordstatus.com
-dis.gd
-discord.co
-discord-attachments-uploads-prd.storage.googleapis.com
 topersoft.com
 redditstatic.com
 crossoutdb.com
@@ -313,10 +297,6 @@ csp.withgoogle.com␍
 wttr.in
 external-content.duckduckgo.com
 duckduckgo.com
-x.com
-abs.twimg.com
-abs-0.twimg.com
-pbs.twimg.com
 tryhackme.com
 js.hsforms.net
 novnc.cell-prod-eu-west-1b.vm.tryhackme.com
@@ -348,7 +328,6 @@ www.protondb.com
 www.gstatic.com
 i.ibb.co
 hacknotice.com
-fonts.googleapis.com
 family-guy.mult-fan.tv
 s5.streamani.top
 s1.streamani.top
@@ -461,6 +440,7 @@ www.redditstatic.com
 www.gstatic.com
 discuss-sdn.kde.org
 anydesk.com
-fonts.gstatic.com
 gofile.io
 old.yammyani.me
+accounts.google.ru
+play.google.com

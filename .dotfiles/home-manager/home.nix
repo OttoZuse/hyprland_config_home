@@ -2,7 +2,7 @@ let
   unstable = import <unstable> { config = {allowUnfree = true; }; };
   nix25_05 = import <nix25.05> { config = {allowUnfree = true; }; };
 in
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
   home.username = "joyboy";
   home.homeDirectory = "/home/joyboy";
 
@@ -19,14 +19,41 @@ in
   home.packages = [
     # pkgs.droidcam
     pkgs.mapscii
+    pkgs.tcpdump
+    pkgs.intelephense
+    pkgs.nix-diff
+    pkgs.php
+    pkgs.lua
+    # pkgs.lua-language-server
+    pkgs.nmap
+    pkgs.foliate
+    pkgs.pv
+    pkgs.chromium
+    # pkgs.flclash
+    pkgs.rusty-path-of-building
+    pkgs.lutris
+    # pkgs.wowup-cf
+    pkgs.minesweep-rs
+    pkgs.audacious
+    pkgs.opencode-desktop
+    pkgs.gamemode
+    # pkgs.awakened-poe-trade
+    pkgs.unzip
+    pkgs.dpkg
+    # pkgs.anydesk
+    pkgs.soundconverter
+    pkgs.steam-run-free
     pkgs.termdown
-    unstable.throne
+    pkgs.quickshell
+    unstable.discord
+    pkgs.gamemode
+    pkgs.parallel
     unstable.element-desktop
     unstable.obsidian
     pkgs.ollama-rocm
     # unstable.open-webui
     pkgs.obs-studio
-    pkgs.nix-ld
+    unstable.nix-ld
     unstable.winetricks
     unstable.wine
     pkgs.php
@@ -37,7 +64,7 @@ in
     pkgs.sqlite
     pkgs.sqlitestudio
     # pkgs.qwen-code
-    pkgs.commonsCompress
+    pkgs.commons-compress
     pkgs.links2
     pkgs._7zz-rar
     pkgs.iperf2
@@ -50,7 +77,7 @@ in
     pkgs.onlyoffice-desktopeditors
     pkgs.qbittorrent
     pkgs.protonup-ng
-    unstable.bottles-unwrapped
+    pkgs.bottles
     pkgs.dotool
     pkgs.wlrctl
     pkgs.ccls
@@ -72,28 +99,27 @@ in
     pkgs.nwg-look
     pkgs.pamixer
     pkgs.wlogout
-    pkgs.woomer
+    unstable.woomer
     pkgs.jq
     # pkgs.eww
     pkgs.hyprpolkitagent
     pkgs.nil
-    pkgs.bash-language-server
+    # pkgs.bash-language-server
     pkgs.cava
     pkgs.nixd
-    pkgs.waytrogen
+    unstable.waytrogen
     pkgs.mpvpaper
     pkgs.killall
     unstable.ayugram-desktop
     unstable.steam
-    pkgs.easyeffects
-    unstable.vesktop
+    unstable.easyeffects
+    pkgs.vesktop
     pkgs.hyprshot
     pkgs.kitty
     pkgs.btop
     pkgs.curl
     pkgs.git
     pkgs.stow
-    pkgs.waybar
     pkgs.wofi
 # -------FONTS----------------------
     pkgs.adwaita-fonts
@@ -102,6 +128,9 @@ in
     pkgs.font-awesome
     pkgs.fira-code
     pkgs.fira-code-symbols
+    pkgs.courier-prime
+    pkgs.courier-unicode
+    pkgs.monaspace
     # liberation_ttf
     # noto-fonts
     # noto-fonts-color-emoji
@@ -111,19 +140,33 @@ in
     # liberation_ttf
     # roboto-mono
   ];
+  programs.waybar = {
+    enable = true;
+    package = (builtins.getFlake "github:Alexays/Waybar").packages.${pkgs.stdenv.hostPlatform.system}.waybar;
+  };
+  wayland.windowManager.hyprland.configType = "lua";
   wayland.windowManager.hyprland = {
     enable = true;
     package = unstable.hyprland;
     xwayland.enable = true;
     systemd.enable = true;
     extraConfig = ''
-      source = ~/hyprland_config_home/hypr/hyprland.conf
+      dofile("/home/joyboy/hypr/hyprland.lua")
     '';
     # plugins = [
     #   unstable.hyprlandPlugins.hyprscrolling
     #   unstable.hyprlandPlugins.hy3
     # ];
   };
+  # languages.rust = {
+  #   channel = "nightly";
+  #   components = [
+  #     "cargo"
+  #     "rust-src"
+  #     "rustc"
+  #   ];
+  #   enable = true;
+  # };
   programs.zsh = {
     enable = true;
     oh-my-zsh = {
@@ -132,14 +175,16 @@ in
       theme = "cypher";
     };
     sessionVariables = {
-      NIXPKGS_ALLOW_UNFREE=1;      
+      NIXPKGS_ALLOW_UNFREE=1;
+      NIXPKGS_ALLOW_INSECURE=1;
+      XDG_SESSION_TYPE="x11";
     };
     shellAliases = {
       shx="sudo -E hx $@";
       router="ssh root@OpenWrt";
-      loadcfg = "scp /home/joyboy/config root@OpenWrt:/opt/zapret";
-      loadall="scp /home/joyboy/zapret-all root@OpenWrt:/opt/zapret/ipset";
-      loadexclude="scp /home/joyboy/zapret-exclude root@OpenWrt:/opt/zapret/ipset";
+      loadcfg = "scp /home/joyboy/config root@192.168.1.1:/opt/zapret";
+      loadall="scp /home/joyboy/zapret-all root@192.168.1.1:/opt/zapret/ipset";
+      loadexclude="scp /home/joyboy/zapret-exclude root@192.168.1.1:/opt/zapret/ipset";
       hl="start-hyprland";
       bl="sudo /bin/light";
     };

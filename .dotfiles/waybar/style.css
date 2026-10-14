@@ -47,7 +47,9 @@
   /* font-family: minecrafter; */
   /* font-family: monocraft; */
   /* font-family: Helvetica; */
-  font-family: maplemononormal;
+  /* font-family: maplemononormal; */
+  font-family: monaco, courier-prime, maplemononormal;
+  /* font-family: courier-ptime; */
   /* font-family: minecraft; */
   /* font-family: "Jetbrains Mono Nerd", monospace; */
   font-size: 13px;
