@@ -23,7 +23,8 @@
         "custom/cava"
     ],
     "modules-center": [
-        "hyprland/window"
+        "hyprland/window",
+        "custom/light"
     ],
     "modules-right": [
         // "custom/waybar-media",
@@ -40,6 +41,11 @@
         // "custom/power"
         // "custom/custom"
     ],
+    "custom/light": {
+        "exec": "cat /etc/bl/value",
+        "interval": 3,
+        "format": "✸ {}"
+    },
     "custom/gpu-usage": {
         "format": "󰾲 {}",
         "exec": "~/.cargo/bin/gpu-usage-waybar --text-format {gpu_utilization}%' '{mem_utilization}%' '{temperature}°C",

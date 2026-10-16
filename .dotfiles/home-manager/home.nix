@@ -21,6 +21,11 @@ in
     pkgs.mapscii
     pkgs.tcpdump
     pkgs.intelephense
+    pkgs.geekbench
+    pkgs.furmark
+    pkgs.unigine-heaven
+    pkgs.gopls
+    pkgs.go
     pkgs.nix-diff
     pkgs.php
     pkgs.lua
@@ -181,7 +186,7 @@ in
     };
     shellAliases = {
       shx="sudo -E hx $@";
-      router="ssh root@OpenWrt";
+      router="ssh root@192.168.1.1";
       loadcfg = "scp /home/joyboy/config root@192.168.1.1:/opt/zapret";
       loadall="scp /home/joyboy/zapret-all root@192.168.1.1:/opt/zapret/ipset";
       loadexclude="scp /home/joyboy/zapret-exclude root@192.168.1.1:/opt/zapret/ipset";

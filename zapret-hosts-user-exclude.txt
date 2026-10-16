@@ -22,3 +22,11 @@ steamcommunity.com
 community.akamai.steamstatic.com
 old.yummyani.me
 tailscale.com
+kodir2.github.io
+ia.media-imdb.com
+fort.tartugi.net
+kurolesya.link
+github.githubassets.com
+habr.com
+search.nixos.org
+mail.yandex.ru
