@@ -82,7 +82,6 @@ in
     pkgs.onlyoffice-desktopeditors
     pkgs.qbittorrent
     pkgs.protonup-ng
-    pkgs.bottles
     pkgs.dotool
     pkgs.wlrctl
     pkgs.ccls
@@ -194,10 +193,6 @@ in
       bl="sudo /bin/light";
     };
   };
-
-  # programs.bottles = {
-  #   override.removeWarningPopup = true;
-  # };
 
   home.stateVersion = "25.11";
   programs.home-manager.enable = true;

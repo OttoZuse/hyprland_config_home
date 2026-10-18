@@ -32,3 +32,4 @@ search.nixos.org
 mail.yandex.ru
 reddit.com
 uicolorful.com
+store.steampowered.com

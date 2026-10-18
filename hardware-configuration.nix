@@ -31,13 +31,14 @@
     };
 
   fileSystems."/heap" =
-    { device = "/dev/disk/by-uuid/39e66e5f-047b-4e44-a736-4b16acb4ee4f";
+    { device = "/dev/disk/by-label/NIXHEAP";
       fsType = "ext4";
+      options = [ "rw" ];
     };
 
-  swapDevices =
-    [ { device = "/dev/disk/by-label/NIXSWAP"; }
-    ];
+  # swapDevices =
+  #   [ { device = "/dev/disk/by-label/NIXSWAP"; }
+  #   ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
