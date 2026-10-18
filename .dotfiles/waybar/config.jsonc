@@ -97,11 +97,11 @@
     },
     "hyprland/workspaces": {
         // "format": "{icon} {id}",
-        "format": "{}",
-        "format-icons": {
-            "active": "",
-            "default": ""
-        },
+        "format": "{id}",
+        // "format-icons": {
+        //     "active": "",
+        //     "default": ""
+        // },
         // "on-scroll-up": "hyprctl dispatch workspace e-1",
         // "on-scroll-down": "hyprctl dispatch workspace e+1",
         // "on-click": "activate"

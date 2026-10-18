@@ -2,7 +2,7 @@ let
   unstable = import <unstable> { config = {allowUnfree = true; }; };
   nix25_05 = import <nix25.05> { config = {allowUnfree = true; }; };
 in
-{ pkgs, inputs, ... }: {
+{ pkgs, ... }: {
   home.username = "joyboy";
   home.homeDirectory = "/home/joyboy";
 

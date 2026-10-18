@@ -12,7 +12,7 @@ hl.monitor({
 })
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("waybar & easyeffects")
+    hl.exec_cmd("waybar")
     hl.exec_cmd(wallpaper)
 end)
 
@@ -137,7 +137,7 @@ hl.config({
         },
         border_size = 2,
         gaps_in = 2,
-        gaps_out = 4,
+        gaps_out = 2,
         allow_tearing = true
     },
     dwindle = {
@@ -172,7 +172,7 @@ hl.config({
         enabled = true,
     },
     misc = {
-         force_default_wallpaper = 1,
+         force_default_wallpaper = -1,
          focus_on_activate = true,
     },
 })
